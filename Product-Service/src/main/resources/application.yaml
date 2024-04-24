@@ -1,0 +1,48 @@
+server:
+  port: 8090
+spring:
+  output:
+    ansi:
+      enabled: detect
+  application:
+    name: Product-Service
+  datasource:
+    url: jdbc:mysql://localhost:3306/microservices
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: root
+    
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+    
+#eureka:
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultzone: http://localhost:8761/eureka
+#  instance:
+#    prefer-ip-address: true    
+    
+      
+    
+    
+    
+logging:
+  #file:
+    #path: C:/Java_Workspace/Logfiles/product-webservices.log
+  level: 
+    root: info
+  pattern:
+      console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+      file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+
+      
+    
+    
+
+    
+    
